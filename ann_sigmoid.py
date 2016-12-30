@@ -1,4 +1,4 @@
-import numpy
+import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.utils import shuffle
 
@@ -66,7 +66,7 @@ def main():
     X1 = X[Y==1, :]
     X1 = np.repeat(X1, 0, axis=0)
     X = np.vstack([X0, X1])
-    Y = np.array([0]*len(X0)+1*len(X1))
+    Y = np.array([0]*len(X0)+[1]*len(X1))
 
     model = ANN(100)
     model.fit(X, Y, show_fig=True)
