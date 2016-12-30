@@ -16,11 +16,11 @@ class ANN(object):
         self.W1 = np.random.randn(D, self.M) / np.sqrt(D + self.M)
         self.b1 = np.zeros(self.M)
         self.W2 = np.random.randn(self.M) / np.sqrt(self.M)
-        self.b1 = 0
+        self.b2 = 0
 
         costs = []
         best_validation_error = 1
-        for i in xrange(epochs):
+        for i in range(epochs):
             # forward propagation
             pY, Z = self.forward(X)
 
